@@ -1,0 +1,2 @@
+# Personal, machine-specific Claude Code settings — never share or copy into other projects.
+.claude/settings.local.json

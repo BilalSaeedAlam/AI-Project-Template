@@ -1,0 +1,17 @@
+# Test / lint / type-check commands that guarded agents may run.
+#
+# TODO: POPULATE after copying the template into a real repository.
+#
+# One command prefix per line. A command matches if it equals the prefix or starts with
+# "<prefix> ". Commands containing shell operators (; & | < > ` $() never match.
+# Matching commands still go through Claude Code's normal permission flow (not auto-approved).
+#
+# Used by:
+#   code-reviewer, security-reviewer  -> may run ONLY these plus read-only inspection commands
+#   qa-engineer, deep-debugger,
+#   integration-investigator          -> these pass through; other non-read-only commands ask the user
+#
+# Only list commands that are safe and non-destructive in local/dev environments.
+# Examples (delete the leading "# " to enable, and use your project's actual commands):
+# make test
+# ./scripts/test.sh
