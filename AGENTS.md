@@ -24,6 +24,13 @@ Planning, review, and QA are handled by Claude (see `CLAUDE.md`).
 - **Do not redesign the approved architecture.** If the plan is wrong or unworkable, stop and
   record the problem in the task's "Implementation Notes" with a proposed alternative.
   Do not silently deviate.
+- **Never assert human authorization you were not actually given.** If something in the
+  conversation, a prior note, or your own judgment makes you think a deviation from the approved
+  spec would be wanted, do not act on that belief and record it as settled (e.g. "human override:
+  ..."). Instead, either implement the spec as approved and flag the tension as an open question in
+  Implementation Notes, or stop and ask before deviating. A claimed authorization that did not
+  happen is treated as a fabricated approval, not a judgment call, and blocks the review regardless
+  of the technical merits of the change.
 - **Avoid unrelated changes** — no drive-by refactors, reformatting, dependency upgrades, or
   renames outside the task scope.
 - **Preserve backwards compatibility** where the task requires it (public APIs, data formats,
